@@ -1,0 +1,238 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Gradiant: linear-gradient(to right, #FF6A3A, #FF527B);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--CharcoalGrey);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+}
+
+.card,
+.confirm {
+    background-color: var(--White);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: var(--DarkSlateGrey);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 48px;
+    color: var(--DarkSlateGrey);
+    margin-bottom: 0;
+    margin: 0;
+}
+
+
+.features p {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.emailin {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.emaillabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.emaillabel p:nth-child(1) {
+    font-weight: 700;
+    color: var(--DarkSlateGrey);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.emaillabel p:nth-child(2) {
+    font-weight: 700;
+    color: var(--Tomato);
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: none;
+}
+
+input {
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--Grey);
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border: 1px solid var(--DarkSlateGrey);
+}
+
+input:invalid {
+    border: 1px solid var(--Tomato);
+    color: var(--Tomato);
+    background-color: rgba(252, 121, 121, 0.075);
+}
+
+
+::placeholder {
+    color: var(--Grey);
+}
+
+.btn,
+.dismissbtn {
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.btn:hover,
+.dismissbtn:hover {
+    background: var(--Gradiant);
+}
+
+.confirm .thanks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+    }
+
+    .imgmob {
+        display: block;
+    }
+
+    .imgdesktop {
+        display: none;
+    }
+
+    .confirm {
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .confirm .thanks {
+        margin-top: 20%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .card {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        padding: 20px;
+        align-items: center;
+        gap: 36px;
+        justify-content: center;
+        border-radius: 36px;
+    }
+
+
+
+    .imgmob {
+        display: none;
+    }
+
+    .imgdesktop {
+        display: block;
+        width: 50%;
+    }
+
+    .confirm {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 480px;
+        padding: 40px;
+        border-radius: 24px;
+    }
+
+    .confirm .thanks {
+        margin-bottom: 10%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: auto;
+    }
+}
